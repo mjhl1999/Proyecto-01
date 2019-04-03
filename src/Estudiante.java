@@ -26,7 +26,7 @@ public class Estudiante{
 
   /* Getters y Setters para los atributos del estudiante. */
   public String getNombre() {
-   return name;
+   return nombre;
  }
 
  public void setName(String nombre) {
@@ -67,14 +67,16 @@ public class Estudiante{
 
   /* Metodos del estudiante. */
   public double dameCalifMateria(String materia){
-    return "FALTA IMPLEMENTAR";
+    //FALTA IMPLEMENTAR
+    return 0.0;
   }
 
   public double damePromedio(){
-    return "FALTA IMPLEMENTAR";
+    //FALTA IMPLEMENTAR
+    return 0.0;
   }
 
   public void inscribirOpcTecnica(String opcionTecnica){
-    return "FALTA IMPLEMENTAR";
+    //FALTA IMPLEMENTAR
   }
 }

@@ -9,14 +9,14 @@ public class Profesor{
   private String[] grupo;
 
   /* Constructor del profesor. */
-  public Estudiante(String nombre,  String[] grupo) {
+  public Profesor(String nombre,  String[] grupo) {
     this.nombre = nombre;
     this. grupo = grupo;
   }
 
   /* Getters y Setters para los atributos del profesor. */
   public String getNombre() {
-   return name;
+   return nombre;
   }
 
   public void setName(String nombre) {
@@ -24,7 +24,7 @@ public class Profesor{
   }
 
   public String[] getGrupo() {
-   return name;
+   return grupo;
   }
 
   public void setGrupo(String[] nombre) {
@@ -37,6 +37,6 @@ public class Profesor{
   }
 
   public void asignaCalifEstudiante(double calificacion){
-      return "FALTA IMPLEMENTAR";
+    //FALTA IMPLEMENTAR
   }
 }
