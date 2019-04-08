@@ -1,46 +1,50 @@
-  /**
- * Clase para representar administradores. Un administrador tiene nombre, lista de
- * materias, lista de profesores, promedio y opcion tecnica.
-*/
+public class Administrador{
 
-public class administrador{
+    private Escuela escuela;
+    private int serie;
 
-  /* Metodos del profesor. */
+    public Administrador(Escuela escuela, int serie){
+        this.escuela = escuela;
+        this.serie = serie;
+    }
 
-  public String[] dameAlumnos(){
-    //FALTA IMPLEMENTAR
-      return;
-  }
+    public int getSerie(){
+        return this.serie;
+    }
 
-  public String[] dameAlumnosArea(String area){
-    //FALTA IMPLEMENTAR
-      return;
-  }
+    public void listaDeAlumnos(){
+        this.escuela.muestraInscritos();
+    }
 
-  public String[] dameOpTecnica(String opcionTecnica){
-    //FALTA IMPLEMENTAR
-      return;
-  }
+    public void listaDeAlumnosArea(int area){
+        this.escuela.muestraInscritosArea(area);
+    }
 
-  public String[] dameProfesores(){
-    //FALTA IMPLEMENTAR
-      return;
-  }
+    public void listaDeAlumnosOTC(String otc){
+        escuela.muestraInscritosOTC(otc);
+    }
 
-  public void registraAlumno(String nombre,  String[] materias, String[] profesores,
-                    double promedio, String opcionTecnica){
-     //FALTA IMPLEMENTAR
-  }
+    public void listaDeProfesores(){
+        escuela.muestraProfesores();
+    }
 
-  public void daDeBajaAlumno(String nombre){
-      //FALTA IMPLEMENTAR
-  }
+    public void graduarAlumno(Estudiante estudiante){
+        System.out.println("el alumno " + estudiante.getNombre() + "se graduo con un promedio de: " +
+                            escuela.getAlumnos().get(estudiante.getCuenta()).getPromedio());
+        escuela.eliminaAlumno(estudiante);
+    }
 
-  public void contrataProfesor(String nombre,  String grupo){
-      //FALTA IMPLEMENTAR
-  }
+    public void eliminaAlumno(Estudiante estudiante){
+          escuela.eliminaAlumno(estudiante);
+    }
 
-  public void despideProfesor(String nombre){
-      //FALTA IMPLEMENTAR
-  }
+    public void inscribirAlumno(Estudiante estudiante){
+        escuela.getAlumnos().put(estudiante.getCuenta(), estudiante);
+    }
+
+    public void contratarProfesor(Profesor profesor){
+        escuela.contrataProfesor(profesor);
+    }
+
+
 }
