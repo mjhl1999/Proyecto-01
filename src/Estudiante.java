@@ -1,82 +1,61 @@
-/**
- * Clase para representar estudiantes. Un estudiante tiene nombre, lista de
- * materias, lista de profesores, promedio y opcion tecnica.
-*/
-
 public class Estudiante{
 
-  /* Atributos del estudiante. */
-  private String nombre;
-//private String id;
-  private String[] materias;
-  private String[] profesores;
-  private double promedio;
-  private String opcionTecnica;
+      private String nombre;
+      private int cuenta;
+      private int edad;
+      private int area;
+      private OTC otc;
+      private double promedio;
+      private Escuela escuela;
 
-  /* Constructor del estudiante. */
-  public Estudiante(String nombre,  String[] materias, String[] profesores,
-                    double promedio, String opcionTecnica) {
-    this.nombre = nombre;
-    this.materias = materias;
-    this.profesores = profesores;
-    this.promedio = promedio;
-    this.opcionTecnica = opcionTecnica;
-  }
+      public Estudiante(String nombre, int cuenta, int edad, int area, OTC otc, double promedio, Escuela escuela){
+          this.nombre = nombre;
+          this.cuenta = cuenta;
+          this.edad = edad;
+          this.area = area;
+          this.otc = otc;
+          this.promedio = promedio;
+          this.escuela = escuela;
+      }
 
+      public String getNombre(){
+          return this.nombre;
+      }
 
-  /* Getters y Setters para los atributos del estudiante. */
-  public String getNombre() {
-   return nombre;
- }
+      public int getCuenta(){
+          return this.cuenta;
+      }
 
- public void setName(String nombre) {
-    this.nombre = nombre;
-  }
+      public int getEdad(){
+          return this.edad;
+      }
 
- public String[] getMaterias() {
-   return materias;
- }
+      public int getArea(){
+          return area;
+      }
 
- public void setMaterias(String[] materias) {
-    this.materias = materias;
-  }
+      public OTC getOTC(){
+          return this.otc;
+      }
 
-  public String[] getProfesores() {
-    return profesores;
-  }
+      public double getPromedio(){
+          return this.escuela.getAlumnos().get(this.getCuenta()).getPromedio();
+      }
 
-  public void setProfesores(String[] profesores) {
-     this.profesores = profesores;
-  }
+      public void setPromedio(double promedioNuevo){
+          this.promedio = promedioNuevo;
+      }
 
-  public double getPromedio() {
-    return promedio;
-  }
+      public double consultaCalificacion(String materia){
+          return this.escuela.consultaCalificacion(this, materia);
+      }
 
-  public void setPromedio(double promedio) {
-     this.promedio = promedio;
-  }
+      public void inscribirseOTC(String opcion){
+          this.escuela.inscribirseOTC(this, opcion);
+      }
 
-  public String getOpcionTecnica() {
-    return opcionTecnica;
-  }
+      public void estudianteToString(){
+          System.out.println(this.nombre);
+      }
 
-  public void setOpcionTecnica(String opcionTecnica) {
-     this.opcionTecnica = opcionTecnica;
-  }
-
-  /* Metodos del estudiante. */
-  public double dameCalifMateria(String materia){
-    //FALTA IMPLEMENTAR
-    return 0.0;
-  }
-
-  public double damePromedio(){
-    //FALTA IMPLEMENTAR
-    return 0.0;
-  }
-
-  public void inscribirOpcTecnica(String opcionTecnica){
-    //FALTA IMPLEMENTAR
-  }
 }

@@ -1,42 +1,47 @@
-/**
- * Clase para representar profesores. Un profesor tiene nombre y grupo.
-*/
+public class Profesor {
 
-public class Profesor{
+      private int serie;
+      private String nombre;
+      private int edad;
+      private Clase clase;
 
-  /* Atributos del estudiante. */
-  private String nombre;
-  private String[] grupo;
+      public Profesor(int serie, String nombre, int edad, Clase clase){
+          this.serie = edad;
+          this.nombre = nombre;
+          this.edad = edad;
+          this.clase = clase;
+      }
 
-  /* Constructor del profesor. */
-  public Profesor(String nombre,  String[] grupo) {
-    this.nombre = nombre;
-    this. grupo = grupo;
-  }
+      public int getSerie(){
+         return this.serie;
+      }
 
-  /* Getters y Setters para los atributos del profesor. */
-  public String getNombre() {
-   return nombre;
-  }
+      public String getNombre(){
+          return this.nombre;
+      }
 
-  public void setName(String nombre) {
-    this.nombre = nombre;
-  }
+      public int getEdad(){
+          return this.edad;
+      }
 
-  public String[] getGrupo() {
-   return grupo;
-  }
+      public Clase getClase(){
+          return this.clase;
+      }
 
-  public void setGrupo(String[] nombre) {
-    this.grupo = grupo;
-  }
+      public int getGupo(){
+          return this.clase.getGrupo();
+      }
 
-  /* Metodos del profesor. */
-  public String dameInfoDeGrupo(String grupo){
-    return "FALTA IMPLEMENTAR";
-  }
+      public void setCalifiacion(Estudiante estudiante, double promedioNuevo){
+          clase.getInscritos().get(estudiante.getCuenta()).setPromedio(promedioNuevo);
+      }
 
-  public void asignaCalifEstudiante(double calificacion){
-    //FALTA IMPLEMENTAR
-  }
+      public String getMateria(){
+          return clase.getMateria();
+      }
+
+      public void profesorToString(){
+          System.out.println(this.nombre);
+      }
+
 }
