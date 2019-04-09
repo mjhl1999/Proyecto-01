@@ -39,7 +39,8 @@ public class Estudiante{
       }
 
       public double getPromedio(){
-          return this.escuela.getAlumnos().get(this.getCuenta()).getPromedio();
+        return this.promedio;
+          //return this.escuela.getAlumnos().get(this.getCuenta()).promedio;
       }
 
       public void setPromedio(double promedioNuevo){
