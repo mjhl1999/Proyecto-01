@@ -166,6 +166,5 @@ public class Main{
          System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getEdad());
          System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getArea());
          System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getPromedio());
-
     }
 }

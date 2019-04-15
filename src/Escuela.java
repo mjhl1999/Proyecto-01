@@ -3,16 +3,16 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Escuela{
+public class Escuela extends Administra{
 
-
+  /**
     private Hashtable<Integer, Estudiante> alumnos;
     private Area[] area;
     private Profesor[] profesores; //aqui estan todas las clases incluyendo OTC
     private Hashtable<Integer, Administrador> administradores;
     private int contadorProfesores;
     private int n_area;
-
+  */
 
     public Escuela(Area area1, Area area2, Area area3, Area area4 ){
         this.alumnos = new Hashtable<>();
@@ -36,9 +36,12 @@ public class Escuela{
       contadorProfesores ++ ;
     }
 
+
+    /*
     public void addAdministrador(Administrador administrador){
         this.administradores.put(administrador.getSerie(), administrador);
     }
+    */
 
     public double consultaCalificacion(Estudiante estudiante, String materia){
           Area areaAuxiliar = this.area[estudiante.getArea()];
@@ -50,9 +53,11 @@ public class Escuela{
           return 0;
     }
 
+    /*
     public Hashtable<Integer, Estudiante> getAlumnos(){
         return this.alumnos;
     }
+    */
 
     public void inscribirseOTC(Estudiante estudiante, String opcion){
         for(int i = 0; i <= 3; i ++){
@@ -61,6 +66,7 @@ public class Escuela{
         }
     }
 
+    /*
     public void muestraInscritos(){
       Integer str;
       Set<Integer> keys = alumnos.keySet();
@@ -81,7 +87,9 @@ public class Escuela{
             auxiliar.get(str).estudianteToString();
         }
     }
+    */
 
+    /*
     public void muestraInscritosOTC(String opcion){
         for(int i = 0; i <= 3; i ++){
             if(profesores[i].getMateria().equals(opcion)){
@@ -96,8 +104,9 @@ public class Escuela{
             }
         }
     }
+    */
 
-
+    /*
     public void muestraProfesores(){
         for(int i = 0; i <= contadorProfesores; i ++){
             profesores[i].profesorToString();
@@ -118,10 +127,13 @@ public class Escuela{
 
         }
     }
+    */
 
+    /*
     public void contrataProfesor(Profesor profesor){
         this.profesores[contadorProfesores ++] = profesor ;
     }
+    */
 
     public void despideProfesor(Profesor profesor){
         for(int i = 0; i <= contadorProfesores; i++){

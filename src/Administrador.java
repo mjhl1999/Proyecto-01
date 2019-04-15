@@ -1,10 +1,9 @@
-public class Administrador{
+public class Administrador extends Administra{
 
-    private Escuela escuela;
+    // private Escuela escuela;
     private int serie;
 
-    public Administrador(Escuela escuela, int serie){
-        this.escuela = escuela;
+    public Administrador(int serie){
         this.serie = serie;
     }
 
@@ -12,6 +11,7 @@ public class Administrador{
         return this.serie;
     }
 
+    /*
     public void listaDeAlumnos(){
         this.escuela.muestraInscritos();
     }
@@ -27,13 +27,15 @@ public class Administrador{
     public void listaDeProfesores(){
         escuela.muestraProfesores();
     }
+    */
 
     public void graduarAlumno(Estudiante estudiante){
         System.out.println("el alumno " + estudiante.getNombre() + "se graduo con un promedio de: " +
-                            escuela.getAlumnos().get(estudiante.getCuenta()).getPromedio());
-        escuela.eliminaAlumno(estudiante);
+                            getAlumnos().get(estudiante.getCuenta()).getPromedio());
+        eliminaAlumno(estudiante);
     }
 
+    /*
     public void eliminaAlumno(Estudiante estudiante){
           escuela.eliminaAlumno(estudiante);
     }
@@ -45,6 +47,7 @@ public class Administrador{
     public void contratarProfesor(Profesor profesor){
         escuela.contrataProfesor(profesor);
     }
+    */
 
 
 }
