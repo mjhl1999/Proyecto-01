@@ -40,8 +40,10 @@ public class Profesor {
           return clase.getMateria();
       }
 
+      /*
       public void profesorToString(){
           System.out.println(this.nombre);
       }
+      */
 
 }
