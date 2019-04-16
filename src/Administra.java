@@ -12,6 +12,7 @@ public abstract class Administra{
   public int contadorProfesores;
   public int n_area;
 
+
   // Se obtuvo de escuela
   public void addAdministrador(Administrador administrador){
       this.administradores.put(administrador.getSerie(), administrador);
@@ -20,6 +21,10 @@ public abstract class Administra{
   // Se obtuvo de escuela
   public Hashtable<Integer, Estudiante> getAlumnos(){
       return this.alumnos;
+  }
+
+  public Profesor[] getProfesores(){
+      return this.profesores;
   }
 
   // Se obtuvo de escuela
@@ -53,7 +58,7 @@ public abstract class Administra{
   // Se obtuvo de escuela
   public void muestraProfesores(){
       for(int i = 0; i <= contadorProfesores; i ++){
-          profesores[i].profesorToString();
+        profesores[i].profesorToString();
       }
   }
 
@@ -75,7 +80,8 @@ public abstract class Administra{
 
   // Se obtuvo de escuela
   public void contrataProfesor(Profesor profesor){
-      this.profesores[contadorProfesores ++] = profesor ;
+      this.profesores[contadorProfesores] = profesor;
+      contadorProfesores++;
   }
 
 
