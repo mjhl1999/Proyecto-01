@@ -166,5 +166,32 @@ public class Main{
          System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getEdad());
          System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getArea());
          System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getPromedio());
+
+         Scanner sc = new Scanner(System.in);
+
+         do {
+           System.out.println("Ingrese que tipo de usuario es: \n" +
+                               "1. Administrador \n" +
+                               "2. Profesor \n" +
+                               "3. Estudiante \n" +
+                               "0. Salir\n");
+
+           String opcionUsuario = sc.nextLine();
+           opcion = Integer.parseInt(opcionUsuario);
+
+           switch (opcion) {
+             case 1:
+
+               break;
+
+             case 2:
+               break;
+
+             case 3:
+               break;
+           default:
+               System.out.println("Inregrese un tipo de usuario valido");
+           }
+        } while (opcion != 0);
     }
 }
