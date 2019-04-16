@@ -49,6 +49,7 @@ public class Main{
      ENP6.contrataProfesor(profesor11);
      ENP6.contrataProfesor(profesor12);
 
+
      Estudiante estudiante1 = new Estudiante("Luis Pacheco", 315116663, 16, 1, OTC.FLP, 0.0, ENP6);
      Estudiante estudiante2 = new Estudiante("Luis Rodriguez", 315116664, 17, 1, OTC.FLP, 0.0, ENP6);
      Estudiante estudiante3 = new Estudiante("Luis Perez", 315116645, 18, 1, OTC.FLP, 0.0, ENP6);
@@ -220,8 +221,32 @@ public class Main{
      System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getPromedio());
 
      System.out.println(ENP6.getAlumnos());
+     System.out.println("\n");
 
+
+     // Checamos agregar estudiamtes a areas
+     area1.agregaEstudiante(estudiante1);
+     System.out.println(area1.getEstudiantes());
+     System.out.println("\n");
+
+
+     // Aparentemente solo da el primero
      System.out.println(ENP6.getProfesores());
+     System.out.println("\n");
+
+
+     // Funciona
+     System.out.println(ENP6.getProfesor(0).getNombre());
+     System.out.println("\n");
+
+
+     estudiante1.inscribirseOTC("Hoteleria");
+
+     profesor1.setCalifiacion(estudiante1, 3.3);
+
+     System.out.println(ENP6.getProfesor(0).getClase().getEstudiante(315116663).getPromedio());
+
+
 
     }
 }

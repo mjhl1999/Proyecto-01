@@ -24,7 +24,7 @@ public abstract class Administra{
   }
 
   public Profesor[] getProfesores(){
-      return this.profesores;
+    return profesores;
   }
 
   // Se obtuvo de escuela
@@ -58,7 +58,7 @@ public abstract class Administra{
   // Se obtuvo de escuela
   public void muestraProfesores(){
       for(int i = 0; i <= contadorProfesores; i ++){
-        profesores[i].profesorToString();
+        profesores[i].getNombre();
       }
   }
 
