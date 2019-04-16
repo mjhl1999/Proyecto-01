@@ -13,21 +13,28 @@ public abstract class Administra{
   public int n_area;
 
 
-  // Se obtuvo de escuela
+  /** Método que añade un administrador.
+  */
   public void addAdministrador(Administrador administrador){
       this.administradores.put(administrador.getSerie(), administrador);
   }
 
-  // Se obtuvo de escuela
+  /** Método que nos regresa la lista completa de alumnos en la escuela.
+  */
   public Hashtable<Integer, Estudiante> getAlumnos(){
       return this.alumnos;
   }
 
+  /** Método que nos regresa la lista de profesores de la escuela.
+  */
   public Profesor[] getProfesores(){
-    return profesores;
+    return this.profesores;
   }
 
-  // Se obtuvo de escuela
+  /** Método que nos muestra los alumnos inscritos.
+  *  Definimos la llave de cada alumno como su número de cuenta y después recorremos
+  *  el diccionario y por cada llave obtenemos el nombre de cada alumno.
+  */
   public void muestraInscritos(){
     Integer str;
     Set<Integer> keys = alumnos.keySet();
@@ -38,7 +45,11 @@ public abstract class Administra{
     }
   }
 
-  // Se obtuvo de escuela
+  /** Método que nos muestra los inscritos en las opciones técnicas.
+  * Si la materia inscrita es igual al nombre que tiene la opción técnica entonces obtenemos
+  * la clase asignada a cada profesor y una vez en ahí la recorremos y obtenemos el nombre
+  * de cada alumno con base en la llave (su número de cuenta).
+  */
   public void muestraInscritosOTC(String opcion){
       for(int i = 0; i <= 3; i ++){
           if(profesores[i].getMateria().equals(opcion)){
@@ -55,22 +66,29 @@ public abstract class Administra{
   }
 
 
-  // Se obtuvo de escuela
+  /** Método que nos muestra los profesores.
+  * Cada vez que añadimos un profesor al arreglo incrementamos el contador de profesores
+  * entonces aquí recorremos el arreglo de los profesores y mientras no lleguemos al número
+  * máximo obtenemos el p¿nombre de cada profesor.
+  */
   public void muestraProfesores(){
       for(int i = 0; i <= contadorProfesores; i ++){
         profesores[i].getNombre();
       }
   }
 
-  // Se obtuvo de escuela
+  /** Método que elimina un alumno.
+  * @param estudiante el estudiante a eliminar.
+  *
+  */
   public void eliminaAlumno(Estudiante estudiante){
       for(int i = 0; i <= 3; i++){
           if(area[i].getProfesor(0).getClase().getInscritos().get(estudiante.getCuenta()) != null)
               area[i].getProfesor(0).getClase().getInscritos().remove(estudiante.getCuenta());
           if(area[i].getProfesor(1).getClase().getInscritos().get(estudiante.getCuenta()) != null)
                area[i].getProfesor(1).getClase().getInscritos().remove(estudiante.getCuenta());
-
       }
+      
       for(int i = 0; i <= contadorProfesores; i++){
           if(profesores[i].getClase().getInscritos().get(estudiante.getCuenta()) != null)
               profesores[i].getClase().getInscritos().remove(estudiante.getCuenta());
