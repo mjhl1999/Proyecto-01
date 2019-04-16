@@ -40,12 +40,13 @@ public class Estudiante{
 
       public double getPromedio(){
         return this.promedio;
-          //return this.escuela.getAlumnos().get(this.getCuenta()).promedio;
+        //return this.escuela.getAlumnos().get(this.getCuenta()).promedio;
       }
 
-      public void setPromedio(double promedioNuevo){
-          this.promedio = promedioNuevo;
+      public void setPromedio(double promedio){
+        this.promedio = promedio;
       }
+
 
       public double consultaCalificacion(String materia){
           return this.escuela.consultaCalificacion(this, materia);

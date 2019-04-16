@@ -31,12 +31,6 @@ public class Escuela extends Administra{
     }
 
 
-    public void addProfesor(Profesor profesor){
-      this.profesores[contadorProfesores] = profesor;
-      contadorProfesores ++ ;
-    }
-
-
     /*
     public void addAdministrador(Administrador administrador){
         this.administradores.put(administrador.getSerie(), administrador);
