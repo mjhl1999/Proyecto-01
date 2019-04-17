@@ -14,18 +14,21 @@ public abstract class Administra{
 
 
   /** Método que añade un administrador.
+  * @param administrador el administrador a agregar.
   */
   public void addAdministrador(Administrador administrador){
       this.administradores.put(administrador.getSerie(), administrador);
   }
 
   /** Método que nos regresa la lista completa de alumnos en la escuela.
+  * @return los alumnos de la escuela.
   */
   public Hashtable<Integer, Estudiante> getAlumnos(){
       return this.alumnos;
   }
 
   /** Método que nos regresa la lista de profesores de la escuela.
+  * @return los profesores de la escuela.
   */
   public Profesor[] getProfesores(){
     return this.profesores;
@@ -79,7 +82,10 @@ public abstract class Administra{
 
   /** Método que elimina un alumno.
   * @param estudiante el estudiante a eliminar.
-  *
+  * Primero nos fijamos en un area (0-4, en ese orden) y si el estudiante está inscrito,
+  * entonces quitamos al estudiante, relacionado a ese número de cuenta, de esa área.
+  * Después recoremos los profesores y eliminamos al alumno inscrito en la materia respectiva
+  * a ese profesor.
   */
   public void eliminaAlumno(Estudiante estudiante){
       for(int i = 0; i <= 3; i++){
@@ -88,22 +94,22 @@ public abstract class Administra{
           if(area[i].getProfesor(1).getClase().getInscritos().get(estudiante.getCuenta()) != null)
                area[i].getProfesor(1).getClase().getInscritos().remove(estudiante.getCuenta());
       }
-      
+
       for(int i = 0; i <= contadorProfesores; i++){
           if(profesores[i].getClase().getInscritos().get(estudiante.getCuenta()) != null)
               profesores[i].getClase().getInscritos().remove(estudiante.getCuenta());
-
       }
   }
 
-  // Se obtuvo de escuela
+  /** Método que contrata a un profesor.
+  * @param profesor el profesor a contratar.
+  * Recorremos el arreglo de los profesores y agregamos el nuevo profesor al final del
+  * arreglo, después aumentamos el contador y el siguiente profesor se agregará en un
+  * índice más.
+  */
   public void contrataProfesor(Profesor profesor){
       this.profesores[contadorProfesores] = profesor;
       contadorProfesores++;
   }
-
-
-
-
 
 }

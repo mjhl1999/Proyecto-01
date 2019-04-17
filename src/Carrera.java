@@ -17,30 +17,46 @@ public class Carrera{
     this.estudiantes = estudiantes;
   }
 
-  /* Getters y Setters para los atributos de la carrera. */
+  /** Método que nos regresa el nombre de la carrera.
+  * @return el nombre de la carrera.
+  */
   public String getNombre() {
    return nombre;
  }
 
- public void setName(String nombre) {
+ /** Método que define el nombre de la carrera.
+ * @param nombre el nombre de la carrera.
+ */
+  public void setName(String nombre) {
     this.nombre = nombre;
   }
 
-  /* Getters y Setters para los atributos del estudiante. */
+  /** Método que regresa los profesores.
+  * @return los prefesores de la carrera.
+  */
   public String[] getProfesores() {
    return profesores;
- }
+  }
 
- public void setProfesores(String[] profesores) {
+  /** Método que define a los profesores de la carrera.
+  * @param profesores los profesores a definir.
+  */
+  public void setProfesores(String[] profesores) {
     this.profesores = profesores;
   }
 
-  /* Getters y Setters para los atributos del estudiante. */
+  /** Método que obtiene a los estudiantes de la carrera.
+  * @return los estuantes de la carrera.
+  */
   public String[] getEstudiantes() {
    return estudiantes;
- }
+  }
 
- public void setEstudiantes(String[] estudiantes) {
+  /** Método que define a los estudiantes de la carrera.
+  * @param estudiantes los estuantes a definir.
+  */
+  public void setEstudiantes(String[] estudiantes) {
     this.estudiantes = estudiantes;
   }
+  
 }
