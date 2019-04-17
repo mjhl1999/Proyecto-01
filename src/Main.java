@@ -248,7 +248,7 @@ public class Main{
 
      System.out.println(ENP6.getProfesor(0).getClase().getEstudiante(315116663).getPromedio());
 
-     ENP6.muestraInscritosOTC("Agente de viajes y hoteleria");
+     ENP6.muestraInscritosOTC("Agente de Viajes y Hoteleria");
      ENP6.graduarAlumno(estudiante40);
 
     }

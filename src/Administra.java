@@ -43,7 +43,7 @@ public abstract class Administra{
         Iterator<Integer> it3 = keys.iterator();
         while(it3.hasNext()) {
             str = it3.next();
-            alumnos.get(str).estudianteToString();
+            System.out.println(alumnos.get(str).getNombre());
         }
     }
 

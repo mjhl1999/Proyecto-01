@@ -20,7 +20,7 @@ public class Administrador extends Administra{
     * promedio con el que "terminó". Posteriormente se tiene que eliminar de la "lista".
     */
     public void graduarAlumno(Estudiante estudiante){
-        System.out.println("el alumno " + estudiante.getNombre() + "se graduo con un promedio de: " +
+        System.out.println("El alumno " + estudiante.getNombre() + "se graduo con un promedio de: " +
                             getAlumnos().get(estudiante.getCuenta()).getPromedio());
         eliminaAlumno(estudiante);
     }
