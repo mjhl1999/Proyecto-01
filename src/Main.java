@@ -37,6 +37,7 @@ public class Main{
      Area area4 = new Area(1, profesor7, profesor8);
 
      Escuela ENP6 = new Escuela(area1, area2, area3, area4);
+
      ENP6.contrataProfesor(profesor1);
      ENP6.contrataProfesor(profesor2);
      ENP6.contrataProfesor(profesor3);
@@ -221,7 +222,7 @@ public class Main{
      System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getArea());
      System.out.println(ENP6.getProfesor(1).getClase().getEstudiante(315177664).getPromedio());
 
-     System.out.println(ENP6.getAlumnos());
+     ENP6.muestraInscritos();
      System.out.println("\n");
 
 
@@ -232,7 +233,7 @@ public class Main{
 
 
      // Aparentemente solo da el primero
-     System.out.println(ENP6.getProfesores());
+     ENP6.muestraProfesores();
      System.out.println("\n");
 
 
@@ -241,13 +242,14 @@ public class Main{
      System.out.println("\n");
 
 
-     estudiante1.inscribirseOTC("Hoteleria");
+     estudiante1.inscribirseOTC("Agente de viajes y hoteleria");
 
      profesor1.setCalifiacion(estudiante1, 3.3);
 
      System.out.println(ENP6.getProfesor(0).getClase().getEstudiante(315116663).getPromedio());
 
-
+     ENP6.muestraInscritosOTC("Agente de viajes y hoteleria");
+     ENP6.graduarAlumno(estudiante40);
 
     }
 }

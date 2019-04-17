@@ -58,5 +58,5 @@ public class Carrera{
   public void setEstudiantes(String[] estudiantes) {
     this.estudiantes = estudiantes;
   }
-  
+
 }

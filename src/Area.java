@@ -7,7 +7,6 @@ public class Area{
     private int area;
     private Hashtable<Integer, Estudiante> estudiantesArea;
 
-    // Constructor.
     public Area(int area, Profesor profesor1, Profesor profesor2){
         this.area = area;
         this.materias = new Profesor[2];
@@ -35,29 +34,29 @@ public class Area{
     */
     public Profesor getMateria(int materia){
         if(materia == 1)
-          return this.materias[0];
+            return this.materias[0];
         else if(materia == 2)
-          return this.materias[0];
+            return this.materias[0];
         else
-          return null;
-    }
+            return null;
+     }
 
-    /** Método que regresa los estudiantes.
-    * @return los estudiantes de dicha área.
-    * Regresamos el diccionario que contiene a los estudiantes inscritos en dicha
-    * área.
-    */
-    public Hashtable<Integer, Estudiante> getEstudiantes(){
-        return this.estudiantesArea;
-    }
+     /** Método que regresa los estudiantes.
+     * @return los estudiantes de dicha área.
+     * Regresamos el diccionario que contiene a los estudiantes inscritos en dicha
+     * área.
+     */
+     public Hashtable<Integer, Estudiante> getEstudiantes(){
+         return this.estudiantesArea;
+     }
 
-    /** Método que nos regresa un profesor.
-    * @param i el índice del profesor a obtener.
-    * @return el profesor.
-    * Regresamos al profesor que se encuentre en el índice recibido.
-    */
-    public Profesor getProfesor(int i){
-        return materias[i];
-    }
+     /** Método que nos regresa un profesor.
+     * @param i el índice del profesor a obtener.
+     * @return el profesor.
+     * Regresamos al profesor que se encuentre en el índice recibido.
+     */
+     public Profesor getProfesor(int i){
+          return materias[i];
+     }
 
 }
